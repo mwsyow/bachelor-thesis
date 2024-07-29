@@ -1,0 +1,39 @@
+{
+    "dataset":{
+        "path": "C:/bachelor thesis/clean_dataset",
+        "name":"default_of_credit_card_clients",
+        "split": 0.1,
+        "seed": 42,
+        "save_test": true,
+        "save_pre_process": false,
+        "pre_process_path": "C:/bachelor thesis/pre_processes"
+    },
+    "model":{
+        "save": true,
+        "encoder": "ie",
+        "path": "model/dr_model/default_of_credit_card_clients",
+        "name": "bz500_dz3_lr000001"
+    },
+
+    "wandb":{
+        "mode": "none",
+        "entity": "wmarcellius123",
+        "api_key": "f7ebacb09ecdb2b3a190349435297de4c856cbc1",
+        "project": "Trial", 
+        "group": "init",
+        "count": 5
+    },
+    "train": {
+        "parameters":{
+                "epoch": 500,
+                "early_stopping": 500,
+                "margin": 0.000001,
+                "dim_sizes": [273, 182, 91],
+                "dropouts":[0.0, 0.5, 0.5, 0.5],
+                "lr": 0.000001,
+                "batch_size":500, 
+                "shuffle": true,
+                "num_workers": 0
+            }
+        }
+}

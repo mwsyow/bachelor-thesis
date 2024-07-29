@@ -1,0 +1,43 @@
+{
+    "dataset":{
+        "path": "C:/bachelor thesis/clean_dataset",
+        "name":"acs_datasource",
+        "split": 0.1,
+        "seed": 42,
+        "save_test": true,
+        "save_pre_process": false,
+        "pre_process_path": "C:/bachelor thesis/pre_processes"
+    },
+    "model":{
+        "save": true,
+        "encoder": "ohe",
+        "path": "model/log_model/acs_datasource/ohe",
+        "name": "ep500_nofirstdr05_bz500_dz3_lr00001"
+    },
+
+    "wandb":{
+        "mode": "sweep",
+        "entity": "wmarcellius123",
+        "api_key": "f7ebacb09ecdb2b3a190349435297de4c856cbc1",
+        "project": "Sweep_ac", 
+        "group": "init",
+        "count": 5
+    },
+    "train": {
+        "name": "reg",
+        "metric": {"goal": "minimize",
+                "name": "val_loss"},
+        "method": "random",
+        "parameters":{
+                "epoch": {"value": 100},
+                "early_stopping": {"value": 100},
+                "margin": {"value": 0.000001},
+                "dim_sizes":{"values": [[148, 74], [222, 148, 74], [296, 222, 148, 74], [370, 296, 222, 148, 74]]},
+                "dropouts":{"value": null},
+                "lr": {"values":[0.001, 0.0001, 0.00001, 0.000001]},
+                "batch_size":{"values": [5000, 2500, 1000, 500]}, 
+                "shuffle": {"value": true},
+                "num_workers": {"value": 0}
+            }
+        }
+}

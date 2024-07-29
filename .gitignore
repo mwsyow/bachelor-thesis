@@ -1,3 +1,5 @@
+# Ignore __pycache__ directories
+__pycache__/
 #ignore all dataset
 data/
 clean_dataset/
@@ -6,5 +8,7 @@ clean_dataset/
 model/
 #ignore results
 results/
+#ignore pre processed data
+pre_processes/
 
 

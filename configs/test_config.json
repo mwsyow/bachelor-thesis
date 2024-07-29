@@ -1,0 +1,18 @@
+{
+    "dataset":{
+        "path": "C:/bachelor thesis/clean_dataset",
+        "name":"credit-g_csv",
+        "pre_process_path": "C:/bachelor thesis/pre_processes"
+    },
+    "model":{
+        "encoder": "ohe",
+        "path": "model/log_model/acs_datasource/ohe",
+        "name": "ep500_nofirstdr05_bz500_dz3_lr00001"
+    },
+    "parameters": {
+        "dim_sizes": [360, 270,180,90],
+        "batch_size": "all",
+        "shuffle": true,
+        "num_workers": 0
+    }
+}
