@@ -1,0 +1,10 @@
+#ignore all dataset
+data/
+clean_dataset/
+*.csv
+#ignore trained NN models
+model/
+#ignore results
+results/
+
+
